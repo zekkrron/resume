@@ -1,14 +1,198 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[letterpaper,11pt]{article}
 
-\title{Main Resume Akash Singh Sengar}
-\author{akash singh}
-\date{June 2025}
+\usepackage{latexsym}
+\usepackage{mathpazo}
+\usepackage{amssymb}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\setlist[itemize]{left=0pt}
+
+% font options
+\usepackage{newpxtext}
+\linespread{1.05}  % palladio needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}  % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% sections formatting
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% custom commands
+\newcommand{\cvitem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+% tine black square bullet
+
+
+% for the education section
+\newcommand{\cvheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\\ifstrempty{#3}{}{%
+      \small#3 & \small#4 \\
+    }%
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvheadingend}{\end{itemize}}
+\newcommand{\cvitemstart}{\begin{itemize}[leftmargin=1.2em, label={\tiny\textbullet}]}
+\newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
+
+% for rest of the sections
+\newcommand{\cvHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\cvHeadingStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvHeadingEnd}{\end{itemize}}
+\newcommand{\cvItemStart}{\begin{itemize}[label=\tiny\textbullet]\justifying}
+\newcommand{\cvItemEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\cvskill}[2]{
+  \textcolor{black}{\textbf{#1}}\hfill
+  \foreach \x in {1,...,5}{%
+    \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
+  \vspace{-2pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
 
 \begin{document}
 
-\maketitle
+% contact information
+\begin{center}
+  {\fontfamily{ppl}\selectfont\textbf{\LARGE Akash Singh}} \\
+  \vspace{1pt}\small
+  \href{mailto:akash.singh13503@gmail.com}{akash.singh13503@gmail.com}
+  \textbullet\
+  \href{https://github.com/zekkrron}{github/zekkrron}
+  \textbullet\
+  \href{https://www.linkedin.com/in/akash-singh-unique/}{linekdin/akash}
+\end{center}
 
-\section{Introduction}
+\section{\textbf{EDUCATION}}
+\cvheadingstart
+  \cvheading
+    {Netaji Subhas University of Technology, Delhi}{\textbf{Dec 2021 - June 2025}}
+    {\textbf{CGPA:} 8.09} {BTech, Instrumentation and Control Engineering}
+  \cvheading
+    {The Air Force School, Delhi}{\textbf{March 2020 - March 2021}}
+    {\textbf{Percentage:} 95.6$\%$} {Physics, Checmistry, Mathematics and Computer Science}
+  \cvheading
+    {Kendriya Vidyalaya No. 1, AFS Agra}{\textbf{March 2018 - March 2019}}
+    {\textbf{Percentage:} 96.2$\%$} {Physics, Checmistry and Mathematics}
+\cvheadingend
+
+\section{\textbf{TECHNICAL SKILLS}}
+  \cvitemstart
+    \cvitem{\textbf{Languages:} Python, C++, Java, Go, JavaScript, TypeScript, Dart, HTML, CSS}
+    \cvitem{\textbf{Technologies:} Spring Boot, gRPC, GraphQL, Kubernetes, Docker, Snowflake ETL, MongoDB, MySQL, Redis, Postgres, AWSCloud, Azure Cloud, Nginx, RabbitMQ, Apache Kafka, ReactJS, NextJS, NodeJS, Firebase, Flutter, Android}
+  \cvitemend
+\vspace{-5pt}
+
+\section{\textbf{WORK EXPERIENCE}}
+\cvHeadingStart
+  \cvHeading
+    {ClearTax, Bengaluru | 6 Month Software Engineering Intern}{\textbf{Jan 2025 - July 2025}}
+    {} {}
+  \cvItemStart
+    \cvitem{Description}
+    \cvitem{Description}
+    \cvitem{Description}
+    \cvitem{Description}
+  \cvItemEnd
+
+  \cvHeading
+    {IIIT Allahabad | Remote}{\textbf{July 2024 - August 2024}}
+    {}{}
+  \cvItemStart
+    \cvitem{Description}
+    \cvitem{Description}
+  \cvItemEnd
+
+  \cvHeading
+    {Defense Research \& Development Organisation | On-Site}{\textbf{June 2024 - July 2024}}
+    {}{}
+  \cvItemStart
+    \cvitem{Description}
+  \cvItemEnd
+\cvHeadingEnd
+
+\section{\textbf{PROJECTS}}
+\cvHeadingStart
+  \cvHeading
+    {ClearTax, Bengaluru | 6 Month Software Engineering Intern}{}
+    {} {}
+  \cvItemStart
+    \cvitem{Description}
+    \cvitem{Description}
+  \cvItemEnd
+
+  \cvHeading
+    {IIIT Allahabad | Remote}{}
+    {}{}
+  \cvItemStart
+    \cvitem{Description}
+    \cvitem{Description}
+  \cvItemEnd
+
+  \cvHeading
+    {Defense Research \& Development Organisation | On-Site}{}
+    {}{}
+  \cvItemStart
+    \cvitem{Description}
+    \cvitem{Description}
+  \cvItemEnd
+\cvHeadingEnd
+
+\section{\textbf{RESPONSIBILITIES \& EXTRA CURRICULARS}}
+\cvHeadingStart
+\item
+\cvItemStart
+  \cvitem{Licenses \& certifications}
+  \cvitem{Volunteering}
+  \cvitem{\href{https://arxiv.org/}{Publications}}
+  \cvitem{\href{https://patents.google.com/}{Patents}}
+\cvItemEnd
+\cvHeadingEnd
 
 \end{document}
