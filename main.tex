@@ -1,7 +1,6 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage{mathpazo}
 \usepackage{amssymb}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -21,9 +20,9 @@
 \setlist[itemize]{left=0pt}
 
 % Font options
-\usepackage{newpxtext}
+\usepackage{fontspec}
+\setmainfont{Caladea}
 \linespread{1.10} % palladio needs more leading (space between lines)
-\usepackage[T1]{fontenc}
 
 % Page style
 \pagestyle{fancy}
@@ -48,11 +47,8 @@
 
 % Section formatting
 \titleformat{\section}{
-  \vspace{-2pt}\scshape\raggedright\large
+  \vspace{-2pt}\bfseries\raggedright\large
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
-
-% ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
 
 % Custom commands
 \newcommand{\cvitem}[1]{
@@ -85,7 +81,7 @@
 
 \newcommand{\cvHeadingStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\cvHeadingEnd}{\end{itemize}}
-\newcommand{\cvItemStart}{\begin{itemize}[label=\tiny\textbullet]\justifying}
+\newcommand{\cvItemStart}{\begin{itemize}[label=\textbullet]\justifying}
 \newcommand{\cvItemEnd}{\end{itemize}\vspace{-8pt}}
 
 \newcommand{\cvskill}[2]{
@@ -106,7 +102,7 @@
 
 % Contact Information
 \begin{center}
-  {\fontfamily{ppl}\selectfont\textbf{\LARGE Akash Singh}} \\
+  \textbf{\LARGE Akash Singh} \\
   \vspace{1pt}\small
   \href{mailto:akash.singh13503@gmail.com}{akash.singh13503@gmail.com}
   \textbullet\
