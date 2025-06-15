@@ -17,20 +17,22 @@
 \usepackage{ragged2e}
 \usepackage{etoolbox}
 \usepackage{tikz}
+
 \setlist[itemize]{left=0pt}
 
-% font options
+% Font options
 \usepackage{newpxtext}
-\linespread{1.05}  % palladio needs more leading (space between lines)
+\linespread{1.10} % palladio needs more leading (space between lines)
 \usepackage[T1]{fontenc}
 
+% Page style
 \pagestyle{fancy}
 \fancyhf{}  % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% adjust margins
+% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -44,29 +46,26 @@
 \setlength{\tabcolsep}{0in}
 \setlength{\footskip}{5pt}
 
-% sections formatting
+% Section formatting
 \titleformat{\section}{
   \vspace{-2pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
-% custom commands
+% Custom commands
 \newcommand{\cvitem}[1]{
   \item\small{
     {#1\vspace{-2pt}}
   }
 }
 
-% tine black square bullet
-
-
-% for the education section
 \newcommand{\cvheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\\ifstrempty{#3}{}{%
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \ifstrempty{#3}{}{%
       \small#3 & \small#4 \\
-    }%
-    \end{tabular*}\vspace{-7pt}
+    }
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
@@ -74,31 +73,35 @@
 \newcommand{\cvitemstart}{\begin{itemize}[leftmargin=1.2em, label={\tiny\textbullet}]}
 \newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
 
-% for rest of the sections
 \newcommand{\cvHeading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+  \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\cvHeadingStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\cvHeadingEnd}{\end{itemize}}
 \newcommand{\cvItemStart}{\begin{itemize}[label=\tiny\textbullet]\justifying}
-\newcommand{\cvItemEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\cvItemEnd}{\end{itemize}\vspace{-8pt}}
 
 \newcommand{\cvskill}[2]{
   \textcolor{black}{\textbf{#1}}\hfill
-  \foreach \x in {1,...,5}{%
-    \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
-  \vspace{-2pt}
+  \foreach \x in {1,...,5}{
+    \space{
+      \ifnumgreater{\x}{#2}
+        {\color{black!80!white!20}}
+        {\color{black}}
+      \faSquare
+    }
+  }\par\vspace{-2pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
 
 \begin{document}
 
-% contact information
+% Contact Information
 \begin{center}
   {\fontfamily{ppl}\selectfont\textbf{\LARGE Akash Singh}} \\
   \vspace{1pt}\small
@@ -106,9 +109,10 @@
   \textbullet\
   \href{https://github.com/zekkrron}{github/zekkrron}
   \textbullet\
-  \href{https://www.linkedin.com/in/akash-singh-unique/}{linekdin/akash}
+  \href{https://www.linkedin.com/in/akash-singh-unique/}{linekdin/akashsingh}
 \end{center}
 
+\vspace{-16pt}
 \section{\textbf{EDUCATION}}
 \cvheadingstart
   \cvheading
@@ -123,17 +127,16 @@
 \cvheadingend
 
 \section{\textbf{TECHNICAL SKILLS}}
-  \cvitemstart
-    \cvitem{\textbf{Languages:} Python, C++, Java, Go, JavaScript, TypeScript, Dart, HTML, CSS}
-    \cvitem{\textbf{Technologies:} Spring Boot, gRPC, GraphQL, Kubernetes, Docker, Snowflake ETL, MongoDB, MySQL, Redis, Postgres, AWSCloud, Azure Cloud, Nginx, RabbitMQ, Apache Kafka, ReactJS, NextJS, NodeJS, Firebase, Flutter, Android}
-  \cvitemend
-\vspace{-5pt}
+\cvitemstart
+  \cvitem{\textbf{Languages:} Python, C++, Java, JavaScript, TypeScript, HTML, CSS}
+  \cvitem{\textbf{Technologies:} Spring Boot, gRPC, GraphQL, Kubernetes, Docker, MongoDB, MySQL, Redis, Postgres, AWSCloud, RabbitMQ, Apache Kafka, ReactJS, NextJS, NodeJS, Firebase, Git, GitHub, Linux, TCP/IP}
+\cvitemend
+\vspace{-9pt}
 
 \section{\textbf{WORK EXPERIENCE}}
 \cvHeadingStart
   \cvHeading
-    {ClearTax, Bengaluru | 6 Month Software Engineering Intern}{\textbf{Jan 2025 - July 2025}}
-    {} {}
+    {ClearTax, Bengaluru | 6 Month Software Engineering Intern}{\textbf{Jan 2025 - July 2025}}{}{}
   \cvItemStart
     \cvitem{Description}
     \cvitem{Description}
@@ -142,57 +145,44 @@
   \cvItemEnd
 
   \cvHeading
-    {IIIT Allahabad | Remote}{\textbf{July 2024 - August 2024}}
-    {}{}
+    {IIIT Allahabad | Remote}{\textbf{July 2024 - Aug 2024}}{}{}
   \cvItemStart
-    \cvitem{Description}
-    \cvitem{Description}
-  \cvItemEnd
-
-  \cvHeading
-    {Defense Research \& Development Organisation | On-Site}{\textbf{June 2024 - July 2024}}
-    {}{}
-  \cvItemStart
-    \cvitem{Description}
+    \cvitem{Built a \textbf{Multi-PDF} Retrieval-Augmented Generation \textbf{(RAG)} chatbot using the \textbf{LLaMA 3.1 API} for context-aware responses}
+    \cvitem{Integrated \textbf{LlamaIndex}, enabling fast, highly accurate retrieval of indexed data with an average response time of 177 ms}
+    \cvitem{Created an intuitive \textbf{Streamlit} interface that supports smooth user interactions and delivers real-time responses for a seamless experience}
   \cvItemEnd
 \cvHeadingEnd
 
 \section{\textbf{PROJECTS}}
 \cvHeadingStart
   \cvHeading
-    {ClearTax, Bengaluru | 6 Month Software Engineering Intern}{}
-    {} {}
+    {Podcastr : an AI-powered podcast platform | \href{https://github.com/zekkrron/Podcastr}{github link}}{}{}{}
   \cvItemStart
-    \cvitem{Description}
-    \cvitem{Description}
+    \cvitem{Created a Software-as-a-Service \textbf{SAAS} application using \textbf{Next.js 14} and \textbf{Convex} for building, managing, and sharing personalized podcasts with real-time data synchronization and serverless backend and modular code architecture}
+    \cvitem{Integrated \textbf{AI-powered features}, including \textbf{text-to-speech} with 4 distinct voice profiles and \textbf{AI-generated thumbnails}}
+    \cvitem{Optimized search functionality by 60\% with use of \textbf{debouncing} and incorporated \textbf{3rd party authentication} using \textbf{Clerk}}
   \cvItemEnd
 
   \cvHeading
-    {IIIT Allahabad | Remote}{}
-    {}{}
+    {PaperLink : A Google Docs Clone App | \href{https://github.com/zekkrron/PaperLink}{github link}}{}{}{}
   \cvItemStart
-    \cvitem{Description}
-    \cvitem{Description}
-  \cvItemEnd
-
-  \cvHeading
-    {Defense Research \& Development Organisation | On-Site}{}
-    {}{}
-  \cvItemStart
-    \cvitem{Description}
-    \cvitem{Description}
+    \cvitem{Built a \textbf{real-time}, \textbf{collaborative} document editor inspired by Google Docs, supporting multi-user editing with live updates}
+    \cvitem{Implemented \textbf{Quill.js} for rich text editing features along with \textbf{Reactjs} for building a dynamic, and \textbf{responsive} interface}
+    \cvitem{Integrated \textbf{Web-Sockets} using \textbf{socket.io} for client-server communication, reducing real-time collaboration latency by 50\%}
+    \cvitem{Leveraged \textbf{MongoDB Atlas}, a \textbf{cloud-based} NoSQL database service for reliable data persistence and horizontal scalability}
   \cvItemEnd
 \cvHeadingEnd
 
 \section{\textbf{RESPONSIBILITIES \& EXTRA CURRICULARS}}
 \cvHeadingStart
-\item
-\cvItemStart
-  \cvitem{Licenses \& certifications}
-  \cvitem{Volunteering}
-  \cvitem{\href{https://arxiv.org/}{Publications}}
-  \cvitem{\href{https://patents.google.com/}{Patents}}
-\cvItemEnd
+  \item
+  \cvItemStart
+    \cvitem{\textbf{Codeforces}: Among \textbf{top 10\%} Indians on codeforces, designated the title \textbf{- Pupil @Codeforces}. Profile Link: \href{https://codeforces.com/profile/zekkrron}{\textbf{@zekkrron}}}
+    \cvitem{Achieved a \textbf{global rank} of \textbf{1999} out of 36727 candidates in the Biweekly Contest 138 hosted by \textbf{Leetcode}}
+    \cvitem{Solved over \textbf{500+ coding problems} on \textbf{Data Structures and Algorithms} across multiple competitive coding platforms}
+    \cvitem{Secured an \textbf{All India Rank 29,242} in \textbf{Joint Entrance Examination Main 2021} among \textbf{10,48,012} other appearing candidates}
+    \cvitem{Secured an \textbf{All India Rank 15,628} in \textbf{Joint Entrance Examination Advanced 2021} among \textbf{1,41,699} appearing candidates}
+  \cvItemEnd
 \cvHeadingEnd
 
 \end{document}
