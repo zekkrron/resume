@@ -1,7 +1,6 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage{mathpazo}
 \usepackage{amssymb}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -21,9 +20,9 @@
 \setlist[itemize]{left=0pt}
 
 % Font options
-\usepackage{newpxtext}
+\usepackage{fontspec}
+\setmainfont{Caladea}
 \linespread{1.10} % palladio needs more leading (space between lines)
-\usepackage[T1]{fontenc}
 
 % Page style
 \pagestyle{fancy}
@@ -36,8 +35,9 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\usepackage[letterpaper, top=0.3in, bottom=1.0in, left=0.5in, right=0.5in]{geometry}
+% \addtolength{\topmargin}{-.5in}
+% \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -48,11 +48,8 @@
 
 % Section formatting
 \titleformat{\section}{
-  \vspace{-2pt}\scshape\raggedright\large
+  \vspace{-2pt}\bfseries\raggedright\large
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
-
-% ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
 
 % Custom commands
 \newcommand{\cvitem}[1]{
@@ -73,7 +70,7 @@
 
 \newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\cvheadingend}{\end{itemize}}
-\newcommand{\cvitemstart}{\begin{itemize}[leftmargin=1.2em, label={\tiny\textbullet}]}
+\newcommand{\cvitemstart}{\begin{itemize}[leftmargin=1.2em, label={\textbullet}]}
 \newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
 
 \newcommand{\cvHeading}[4]{
@@ -85,7 +82,7 @@
 
 \newcommand{\cvHeadingStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\cvHeadingEnd}{\end{itemize}}
-\newcommand{\cvItemStart}{\begin{itemize}[label=\tiny\textbullet]\justifying}
+\newcommand{\cvItemStart}{\begin{itemize}[label=\textbullet]\justifying}
 \newcommand{\cvItemEnd}{\end{itemize}\vspace{-8pt}}
 
 \newcommand{\cvskill}[2]{
@@ -106,7 +103,7 @@
 
 % Contact Information
 \begin{center}
-  {\fontfamily{ppl}\selectfont\textbf{\LARGE Akash Singh}} \\
+  \textbf{\LARGE Akash Singh} \\
   \vspace{1pt}\small
   \href{mailto:akash.singh13503@gmail.com}{akash.singh13503@gmail.com}
   \textbullet\
@@ -122,11 +119,11 @@
     {Netaji Subhas University of Technology, Delhi}{\textbf{Dec 2021 - June 2025}}
     {\textbf{CGPA:} 8.09} {BTech, Instrumentation and Control Engineering}
   \cvheading
-    {The Air Force School, Delhi}{\textbf{March 2020 - March 2021}}
-    {\textbf{Percentage:} 95.6$\%$} {Physics, Checmistry, Mathematics and Computer Science}
+    {The Air Force School, Delhi}{\textbf{Mar 2020 - Mar 2021}}
+    {\textbf{12th CBSE:} 95.6$\%$} {Physics, Checmistry, Mathematics and Computer Science}
   \cvheading
-    {Kendriya Vidyalaya No. 1, AFS Agra}{\textbf{March 2018 - March 2019}}
-    {\textbf{Percentage:} 96.2$\%$} {Physics, Checmistry and Mathematics}
+    {Kendriya Vidyalaya No. 1, AFS Agra}{\textbf{Mar 2018 - Mar 2019}}
+    {\textbf{10th CBSE:} 96.2$\%$} {Physics, Checmistry and Mathematics}
 \cvheadingend
 
 \section{\textbf{TECHNICAL SKILLS}}
@@ -148,7 +145,7 @@
   \cvItemEnd
 
   \cvHeading
-    {IIIT Allahabad | Remote}{\textbf{July 2024 - Aug 2024}}{}{}
+    {IIIT Allahabad, New Delhi | Machine Learning Intern}{\textbf{July 2024 - Aug 2024}}{}{}
   \cvItemStart
     \cvitem{Built a \textbf{Multi-PDF} Retrieval-Augmented Generation \textbf{(RAG)} chatbot using the \textbf{LLaMA 3.1 API} for context-aware responses}
     \cvitem{Integrated \textbf{LlamaIndex}, enabling fast, highly accurate retrieval of indexed data with an average response time of 177 ms}
@@ -180,7 +177,7 @@
 \cvHeadingStart
   \item
   \cvItemStart
-    \cvitem{\textbf{Codeforces}: Among \textbf{top 10\%} Indians on codeforces, designated the title \textbf{- Pupil @Codeforces}. Profile Link: \href{https://codeforces.com/profile/zekkrron}{\textbf{@zekkrron}}}
+    % \cvitem{\textbf{Codeforces}: Among \textbf{top 10\%} Indians on codeforces, designated the title \textbf{- Pupil @Codeforces}. Profile Link: \href{https://codeforces.com/profile/zekkrron}{\textbf{@zekkrron}}}
     \cvitem{Achieved a \textbf{global rank} of \textbf{1999} out of 36727 candidates in the Biweekly Contest 138 hosted by \textbf{Leetcode}}
     \cvitem{Solved over \textbf{500+ coding problems} on \textbf{Data Structures and Algorithms} across multiple competitive coding platforms}
     \cvitem{Secured an \textbf{All India Rank 29,242} in \textbf{Joint Entrance Examination Main 2021} among \textbf{10,48,012} other appearing candidates}
