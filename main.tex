@@ -74,7 +74,7 @@
 \newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
 
 \newcommand{\cvHeading}[4]{
-  \vspace{-2pt}\item
+  \vspace{0pt}\item
   \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
   \end{tabular*}\vspace{-5pt}
@@ -109,7 +109,7 @@
   \textbullet\
   \href{https://github.com/zekkrron}{github/zekkrron}
   \textbullet\
-  \href{https://www.linkedin.com/in/akash-singh-unique/}{linkedin/akashsingh}
+  \href{https://www.linkedin.com/in/akash-singh-unique/}{linekdin/akashsingh}
   \textbullet\
   \href{https://leetcode.com/u/zekkrron/}{leetcode/akashsingh}
 \end{center}
@@ -146,32 +146,45 @@
     \cvitem{Description}
   \cvItemEnd
 
-  \cvHeading
-    {IIIT Allahabad, New Delhi | Machine Learning Intern}{\textbf{July 2024 - Aug 2024}}{}{}
-  \cvItemStart
-    \cvitem{Built a \textbf{Multi-PDF} Retrieval-Augmented Generation \textbf{(RAG)} chatbot using the \textbf{LLaMA 3.1 API} for context-aware responses}
-    \cvitem{Integrated \textbf{LlamaIndex}, enabling fast, highly accurate retrieval of indexed data with an average response time of 177 ms}
-    \cvitem{Created a \textbf{Streamlit} interface that supports user interactions and delivers real-time responses for a seamless experience}
-  \cvItemEnd
+  % \cvHeading
+  %   {IIIT Allahabad, New Delhi | Machine Learning Intern}{\textbf{July 2024 - Aug 2024}}{}{}
+  % \cvItemStart
+  %   \cvitem{Built a \textbf{Multi-PDF} Retrieval-Augmented Generation \textbf{(RAG)} chatbot using the \textbf{LLaMA 3.1 API} for context-aware responses}
+  %   \cvitem{Integrated \textbf{LlamaIndex}, enabling fast, highly accurate retrieval of indexed data with an average response time of 177 ms}
+  %   \cvitem{Created a \textbf{Streamlit} interface that supports user interactions and delivers real-time responses for a seamless experience}
+  % \cvItemEnd
 \cvHeadingEnd
 
 \section{\textbf{PROJECTS}}
 \cvHeadingStart
   \cvHeading
-    {Podcastr : an AI-powered podcast platform | \href{https://github.com/zekkrron/Podcastr}{github link}}{}{}{}
+    {FitSphere : A Microservices-Based Fitness Tracker App | \href{https://github.com/zekkrron/ai-fitness-activity-tracker}{github link}}{}{}{}
   \cvItemStart
-    \cvitem{Created a Software-as-a-Service \textbf{SAAS} application using \textbf{Next.js 14} and \textbf{Convex} for building, managing, and sharing personalized podcasts with real-time data synchronization and serverless backend and modular code architecture}
-    \cvitem{Integrated \textbf{AI-powered features}, including \textbf{text-to-speech} with 4 distinct voice profiles and \textbf{AI-generated thumbnails}}
-    \cvitem{Optimized search functionality by 60\% with use of \textbf{debouncing} and incorporated \textbf{3rd party authentication} using \textbf{Clerk}}
+    \cvitem{Designed a \textbf{microservices-based} architecture with \textbf{6 Spring Boot services}: API gateway, config, user, activity, AI, and Eureka}
+    \cvitem{Enabled seamless client interaction through an \textbf{API Gateway} and service discovery and \textbf{load balancing} via \textbf{Eureka Server}}
+    \cvitem{Built secure \textbf{OAuth2-based authentication} and role-based authorization across services using \textbf{Keycloak} identity provider}
+    \cvitem{Implemented \textbf{user validation} via UserService and activity registration via ActivityService, ensuring \textbf{clean service separation}}
+    \cvitem{Streamed user activity data to \textbf{RabbitMQ}, enabling decoupled processing and  \textbf{recommendation generation by} the  \textbf{AI}Service}
+    \cvitem{Used \textbf{PostgreSQL} for user data, \textbf{MongoDB} for both activities and recommendations, \textbf{optimizing storage} for each microservice}
   \cvItemEnd
 
   \cvHeading
-    {PaperLink : A Google Docs Clone App | \href{https://github.com/zekkrron/PaperLink}{github link}}{}{}{}
+    {PaperLink : A Google Docs Clone App | \href{https://github.com/zekkrron/PaperLink}{github link |}
+    \href{https://paper-link-fe-qcg7.vercel.app}{website}}{}{}{}
   \cvItemStart
-    \cvitem{Built a \textbf{real-time}, \textbf{collaborative} document editor inspired by Google Docs, supporting multi-user editing with live updates}
-    \cvitem{Implemented \textbf{Quill.js} for rich text editing features along with \textbf{Reactjs} for building a dynamic, and \textbf{responsive} interface}
-    \cvitem{Integrated \textbf{Web-Sockets} using \textbf{socket.io} for client-server communication, reducing real-time collaboration latency by 50\%}
-    \cvitem{Leveraged \textbf{MongoDB Atlas}, a \textbf{cloud-based} NoSQL database service for reliable data persistence and horizontal scalability}
+    \cvitem{Built a \textbf{real-time} and \textbf{collaborative} document editor inspired by Google Docs, supporting multi-user editing with live updates}
+    \cvitem{Implemented \textbf{Quill.js} for rich text editing features along with \textbf{Reactjs} for building a dynamic and \textbf{responsive} user interface}
+    \cvitem{Integrated \textbf{Web-Sockets} using \textbf{socket.io} for the client-server communication, reducing real-time collaboration latency by 50\%}
+    \cvitem{Made use of \textbf{ MongoDB Atlas}, a \textbf{cloud-based} NoSQL database service for reliable data persistence and horizontal scalability}
+  \cvItemEnd
+
+  \cvHeading
+    {LingoBot : An AI-Powered Email Assistant | \href{https://github.com/zekkrron/LingoBot}{github link}}{}{}{}
+  \cvItemStart
+    \cvitem{Developed a full-stack AI email reply assistant using \textbf{Spring Boot (Java)} for backend and \textbf{React.js} for the frontend interface}
+    \cvitem{Integrated \textbf{Gemini API} to generate \textbf{intelligent email responses} to the mail \textbf{based on selected tones} like formal or friendly}
+    \cvitem{Developed a \textbf{Chrome extension} allowing generation of AI-powered replies directly within Gmail using a custom reply button}
+    % \cvitem{Enabled seamless communication between extension and backend API through secure REST endpoints for generating replies}
   \cvItemEnd
 \cvHeadingEnd
 
@@ -180,8 +193,8 @@
   \item
   \cvItemStart
     % \cvitem{\textbf{Codeforces}: Among \textbf{top 10\%} Indians on codeforces, designated the title \textbf{- Pupil @Codeforces}. Profile Link: \href{https://codeforces.com/profile/zekkrron}{\textbf{@zekkrron}}}
-    \cvitem{Achieved a \textbf{global rank} of \textbf{1999} out of 36727 candidates in the Biweekly Contest 138 hosted by \textbf{Leetcode}}
-    \cvitem{Solved over \textbf{500+ coding problems} on \textbf{Data Structures and Algorithms} across multiple competitive coding platforms}
+    \cvitem{Achieved a \textbf{global rank} of \textbf{1999} out of 36727 candidates present in the \textbf{Biweekly Contest 138} that was  hosted by \textbf{Leetcode}}
+    \cvitem{Solved \textbf{500+ coding problems} on \textbf{Data Structures and Algorithms} and SQL across multiple competitive coding platforms}
     \cvitem{Secured an \textbf{All India Rank 29,242} in \textbf{Joint Entrance Examination Main 2021} among \textbf{10,48,012} other appearing candidates}
     \cvitem{Secured an \textbf{All India Rank 15,628} in \textbf{Joint Entrance Examination Advanced 2021} among \textbf{1,41,699} appearing candidates}
   \cvItemEnd
