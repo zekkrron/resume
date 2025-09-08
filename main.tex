@@ -20,7 +20,6 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
@@ -31,7 +30,6 @@
 % serif
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -52,154 +50,145 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Section formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure PDF is ATS readable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}} 
+\newcommand{\resumeItemListStart}{\begin{itemize}} 
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Akash Singh} \\ \vspace{1pt}
-    \small +91 9818528644 $|$ \href{mailto:akash.singh13503@gmail.com}{\underline{akash.singh13503@gmail.com}} $|$ 
-    \href{https://www.linkedin.com/in/akashSinghSDE/}{\underline{LinkedIn}} $|$ 
-    \href{https://github.com/zekkrron}{\underline{GitHub}} $|$
-    \href{https://leetcode.com/u/zekkrron/}{\underline{Leetcode}}
+  \textbf{\Huge \scshape Akash Singh} \\ \vspace{1pt}
+  \small +91 9818528644 $|$ 
+  \href{mailto:akash.singh13503@gmail.com}{\underline{akash.singh13503@gmail.com}} $|$ 
+  \href{https://www.linkedin.com/in/akashSinghSDE/}{\underline{LinkedIn}} $|$ 
+  \href{https://github.com/zekkrron}{\underline{GitHub}} $|$ 
+  \href{https://leetcode.com/u/zekkrron/}{\underline{Leetcode}}
 \end{center}
-
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Netaji Subhas University of Technology}{Delhi, India}
-      {B.Tech, Instrumentation and Control Engineering -- CGPA: 8.22}{Dec. 2021 -- June 2025}
-  \resumeSubHeadingListEnd
-
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Netaji Subhas University of Technology}{Delhi, India}
+    {B.Tech, Instrumentation and Control Engineering -- CGPA: 8.22}{Dec. 2021 -- June 2025}
+\resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Software Engineering Intern}{Jan. 2025 -- July 2025}
-      {ClearTax}{Bengaluru, India}
-      \resumeItemListStart
-        \resumeItem{Built \textbf{Data-Harvester}, a generic \& configurable data retrieval microservice for the \textbf{Global-Einvoicing} team.}
-        \resumeItem{Authored a \textbf{cron job} for \textbf{Transactional Reconciliation} in Malaysia, reducing data inconsistency by \textbf{60\%}.}
-        \resumeItem{Facilitated e-invoicing expansion to \textbf{Singapore} by crafting essential system templates and configurations.}
-        \resumeItem{Led a 6-week \textbf{on-call} rotation for Malaysia \& Global, cutting average incident resolution time by \textbf{40\%}.}
-        \resumeItem{Boosted Malaysia e-invoicing test coverage from \textbf{30\% to 90\%} using \textbf{AI Coding Agents} and \textbf{JUnit5}.}
-        \resumeItem{Enhanced ingestion and data-retrieval flows to support \textbf{multiple-tax-rates} within a single e-invoice line item.}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Software Engineering Intern}{Jan. 2025 -- July 2025}
+    {ClearTax}{Bengaluru, India}
+    \resumeItemListStart
+      \resumeItem{Built \textbf{Data-Harvester}, a generic \& configurable data retrieval microservice for the \textbf{Global-Einvoicing} team.}
+      \resumeItem{Authored a \textbf{cron job} for \textbf{Transactional Reconciliation} in Malaysia, reducing data inconsistency by \textbf{60\%}.}
+      \resumeItem{Facilitated e-invoicing expansion to \textbf{Singapore} by crafting essential system templates and configurations.}
+      \resumeItem{Led a 6-week \textbf{on-call} rotation for Malaysia \& Global, cutting average incident resolution time by \textbf{40\%}.}
+      \resumeItem{Boosted Malaysia e-invoicing test coverage from \textbf{30\% to 90\%} using \textbf{AI Coding Agents} and \textbf{JUnit5}.}
+      \resumeItem{Enhanced ingestion and data-retrieval flows to support \textbf{multiple-tax-rates} within a single e-invoice line item.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, C++, Java, JavaScript, TypeScript, HTML, CSS, SQL} \\
-     \vspace{7pt}
-     \textbf{Technologies/Frameworks}{: Spring Boot, ReactJS, NextJS, NodeJS, gRPC, GraphQL, Kubernetes, Docker, RabbitMQ, Apache Kafka} \\
-     \vspace{7pt}
-     \textbf{Developer Tools}{: Git, GitHub, MongoDB, MySQL, Redis, PostgreSQL, AWS, Firebase, Linux, TCP/IP}
-    }}
- \end{itemize}
-
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: Python, C++, Java, JavaScript, TypeScript, HTML, CSS, SQL} \\
+    \vspace{7pt}
+    \textbf{Technologies/Frameworks}{: Spring Boot, ReactJS, NextJS, NodeJS, gRPC, GraphQL, Kubernetes, Docker, RabbitMQ, Apache Kafka} \\
+    \vspace{7pt}
+    \textbf{Developer Tools}{: Git, GitHub, MongoDB, MySQL, Redis, PostgreSQL, AWS, Firebase, Linux, TCP/IP}
+  }}
+\end{itemize}
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{FitSphere : A Microservices-Based Fitness Tracker}}
-          {\href{https://github.com/zekkrron/ai-fitness-activity-tracker}{\underline{GitHub}}}
-          \resumeItemListStart
-            \resumeItem{\textbf{Tech Stack:} \emph{Java, Spring Boot, Microservices, RabbitMQ, PostgreSQL, MongoDB}}
-            \resumeItem{Designed a \textbf{6-service microservices} architecture using Java \textbf{Spring Boot}, including gateway and service discovery.}
-            \resumeItem{Implemented an \textbf{API Gateway} for security and a \textbf{Eureka Server} for load balancing, ensuring zero downtime.}
-            \resumeItem{Secured services with \textbf{OAuth2} authentication and role-based access control using \textbf{Keycloak}.}
-            \resumeItem{Used \textbf{RabbitMQ} to stream user data for decoupled processing and AI-driven recommendation generation.}
-            \resumeItem{Optimized storage using \textbf{PostgreSQL} for user data and \textbf{MongoDB} for other microservices.}
-          \resumeItemListEnd
+\resumeSubHeadingListStart
 
-      \resumeProjectHeading
-          {\textbf{PaperLink : A Real Time Collaborative Text Editor}}
-          {\href{https://github.com/zekkrron/PaperLink}{\underline{GitHub}} $|$ \href{https://paper-link-fe-qcg7.vercel.app}{\underline{Website}}}
-          \resumeItemListStart
-            \resumeItem{\textbf{Tech Stack:} \emph{React, Node.js, Socket.io, Quill.js, MongoDB}}
-            \resumeItem{Developed a real-time collaborative editor with live multi-user updates using \textbf{React, Node.js}, and \textbf{Quill.js}.}
-            \resumeItem{Reduced collaboration \textbf{latency by 50\%} by integrating \textbf{WebSockets} via \textbf{socket.io} for real-time updates.}
-            \resumeItem{Utilized \textbf{MongoDB Atlas} for reliable, scalable, and cloud-based NoSQL data persistence.}
-          \resumeItemListEnd
+  \resumeProjectHeading
+    {\textbf{FitSphere : A Microservices-Based Fitness Tracker}}
+    {\href{https://github.com/zekkrron/ai-fitness-activity-tracker}{\underline{GitHub}}}
+    \resumeItemListStart
+      \resumeItem{\textbf{Tech Stack:} \emph{Java, Spring Boot, Microservices, RabbitMQ, PostgreSQL, MongoDB}}
+      \resumeItem{Built a fitness app providing AI-driven health recommendations using a distributed microservices architecture.}
+      \resumeItem{Designed a \textbf{6-service} backend with \textbf{Java Spring Boot} and a \textbf{Eureka Server} for service discovery and load balancing.}
+      \resumeItem{Secured endpoints using an \textbf{API Gateway} and \textbf{Keycloak} for \textbf{OAuth2} authentication and access control.}
+      \resumeItem{Used \textbf{RabbitMQ} for asynchronous, decoupled processing of data for AI-driven recommendations.}
+      \resumeItem{Employed \textbf{PostgreSQL} for transactional user data and \textbf{MongoDB} to optimize storage for other services.}
+    \resumeItemListEnd
 
-      \resumeProjectHeading
-          {\textbf{LingoBot : An AI-Powered Email Assistant}}
-          {\href{https://github.com/zekkrron/LingoBot}{\underline{GitHub}} $|$ \href{https://email-assistant-fe.vercel.app/}{\underline{Website}} $|$ \href{https://chromewebstore.google.com/detail/mlejjlnnnlhocklinofggifkmfilihia}{\underline{Extension}}}
-          \resumeItemListStart
-            \resumeItem{\textbf{Tech Stack:} \emph{Java, Spring Boot, React, Gemini API, Chrome Extension}}
-            \resumeItem{Built an AI email assistant with \textbf{Java Spring Boot} and \textbf{React} to generate replies in under 2 seconds.}
-            \resumeItem{Integrated \textbf{Gemini API} to generate intelligent email replies based on three user-selectable tones.}
-            \resumeItem{Created a 5-star \textbf{Chrome extension} to integrate AI-powered replies directly into the Gmail UI.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+  \resumeProjectHeading
+    {\textbf{PaperLink : A Real Time Collaborative Text Editor}}
+    {\href{https://github.com/zekkrron/PaperLink}{\underline{GitHub}} $|$ \href{https://paper-link-fe-qcg7.vercel.app}{\underline{Website}}}
+    \resumeItemListStart
+      \resumeItem{\textbf{Tech Stack:} \emph{React, Node.js, Socket.io (WebSockets), Quill.js, MongoDB}}
+      \resumeItem{Built a real-time collaborative text editor, for seamless and simultaneous multi-user editing.}
+      \resumeItem{Reduced collaboration \textbf{latency by 50\%} using \textbf{WebSockets} and \textbf{Quill.js} to efficiently broadcast changes.}
+      \resumeItem{Utilized \textbf{MongoDB Atlas} for reliable and scalable cloud-based NoSQL data persistence.}
+    \resumeItemListEnd
 
+  \resumeProjectHeading
+    {\textbf{LingoBot : An AI-Powered Email Assistant}}
+    {\href{https://github.com/zekkrron/LingoBot}{\underline{GitHub}} $|$ \href{https://email-assistant-fe.vercel.app/}{\underline{Website}} $|$ \href{https://chromewebstore.google.com/detail/mlejjlnnnlhocklinofggifkmfilihia}{\underline{Extension}}}
+    \resumeItemListStart
+      \resumeItem{\textbf{Tech Stack:} \emph{Java, Spring Boot, React, Gemini API, Chrome Extension}}
+      \resumeItem{Engineered an AI email assistant using the \textbf{Gemini API} to generate replies in various tones in \textbf{under 2 seconds}.}
+      \resumeItem{Developed and published a 5-star rated \textbf{Chrome extension} to integrate the AI functionality directly into the Gmail UI.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 
 %-----------ACHIEVEMENTS-----------
 \section{Achievements}
-  \resumeSubHeadingListStart
-    \resumeItemListStart
-        \resumeItem{Secured \textbf{global rank 1999}/36,727 in \textbf{Leetcode Biweekly Contest 138} (August 2024).}
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeItemListStart
+    \resumeItem{Secured \textbf{global rank 1999}/36,727 in \textbf{Leetcode Biweekly Contest 138} (August 2024).}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
