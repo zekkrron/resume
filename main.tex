@@ -17,6 +17,8 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
+\usepackage{newunicodechar}
+\newunicodechar{₹}{\textbf{Rs.}}
 \usepackage{tabularx}
 \input{glyphtounicode}
 
@@ -110,7 +112,7 @@
 
 %-----------EDUCATION-----------
 \section{Education}
-\resumeSubHeadingListStart
+\resumeSubHeadingListStart  
   \resumeSubheading
     {Netaji Subhas University of Technology, Delhi}{\textbf{CGPA: 8.22}}
     {B.Tech, Instrumentation and Control Engineering}{December 2021 - June 2025}
@@ -123,24 +125,29 @@
     {Delhivery}{October 2025 - Present}
     {Software Development Engineer 1}{Gurugram, India}
     \resumeItemListStart
-      \resumeItem{Built foundational AI infrastructure via \textbf{MCP servers}, coding \textbf{100+ tools} to seamlessly connect internal business systems to the broader AI ecosystem.}
-      \resumeItem{Engineered a client-facing \textbf{MCP server} to assist external developers, slashing \textbf{Delhivery One API} integration time from \textbf{3 weeks to 1 week}.}
-      \resumeItem{Architected a \textbf{Catalog Service} that automatically converts standard APIs into AI tools, scaling the central registry to \textbf{600+ tools} company-wide.}
-      \resumeItem{Designed complex \textbf{AI Agents} and a custom \textbf{code-as-tool} framework, enabling intelligent, multi-step automation and data transformation for business processes.}
-      \resumeItem{Enabled the Orion team to fully automate freight procurement using AI, eliminating manual intervention and reducing costs from \textbf{₹28 to ₹23} per indent.}
-      \resumeItem{Spearheaded the \textbf{Fleet GPS} automated follow-up system using \textbf{Hunar AI voicebots} and LLMs, slashing manual workforce for truck tracking by \textbf{87\%}.}
+      \resumeItem{\textbf{Tech Stack:} \emph{Python, LangChain, FastMCP, AWS}}
+      \resumeItem{Built foundational \textbf{MCP servers}, coding \textbf{100+ tools} to seamlessly connect internal systems to the AI ecosystem.}
+      \resumeItem{Engineered an \textbf{MCP server} with token-optimized IDE knowledge bases, slashing \textbf{Delhivery One API} client integration from \textbf{3 weeks to 1 week}.}
+      \resumeItem{Developed a \textbf{Catalog Service} API registry, rapidly scaling the central AI ecosystem to \textbf{600+ tools}.}
+      \resumeItem{Architected an \textbf{MCP Gateway} to dynamically convert OpenAPI specs into executable AI tools for UI and chat.}
+      \resumeItem{Designed hierarchical \textbf{AI Agents} using multi-step orchestration and child agents to automate business workflows.}
+      \resumeItem{Automated freight procurement via an \textbf{Indent Creation Agent}, cutting costs from \textbf{₹25} to \textbf{₹7} per indent.}
+      \resumeItem{Integrated an \textbf{Enrichment Agent} to resolve missing data, ensuring clean records for physical truck assignments.}
+      \resumeItem{Led the \textbf{Fleet GPS} follow-up system using LLMs to process delayed trucks and apply tracking codes.}
+      \resumeItem{Deployed \textbf{Hunar AI voicebots} and emails for bulk driver communication, slashing the manual tracking workforce by \textbf{87\%}.}
+      \resumeItem{Engineered a hybrid \textbf{RAG} tool-search engine for the platform, utilizing character-count routing, \textbf{kNN} retrieval, and \textbf{Cross-Encoder} reranking.}
     \resumeItemListEnd
 
   \resumeSubheading
     {ClearTax}{January 2025 - July 2025}
     {Software Engineering Intern}{Bengaluru, India}
     \resumeItemListStart
+      \resumeItem{\textbf{Tech Stack:} \emph{Java, Spring Boot}}
       \resumeItem{Built \textbf{Data-Harvester}, a generic \& configurable data retrieval microservice for the \textbf{Global-Einvoicing} team.}
       \resumeItem{Shipped the \textbf{Transactional Reconciliation} feature in Malaysia, reducing data inconsistency by \textbf{57\%}.}
       \resumeItem{Facilitated e-invoicing expansion to \textbf{Singapore} by crafting essential system templates and configurations.}
       \resumeItem{Led a 6-week \textbf{on-call} rotation for Malaysia \& Global, cutting average incident resolution time by \textbf{38\%}.}
       \resumeItem{Boosted Malaysia e-invoicing test coverage from \textbf{30\% to 90\%} using \textbf{AI Coding Agents} and \textbf{JUnit5}.}
-      \resumeItem{Enhanced ingestion and data-retrieval flows to support \textbf{multiple-tax-rates} within a single e-invoice line item.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -148,11 +155,11 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Languages}{: Python, C++, Java, JavaScript, TypeScript, HTML, CSS, SQL} \\
+    \textbf{Languages}{: Python, C++, Java} \\
     \vspace{2pt}
     \textbf{Technologies/Frameworks}{: Spring Boot, FastAPI, LangChain, FastMCP, Kubernetes, Docker, RabbitMQ, Kafka} \\
     \vspace{2pt}
-    \textbf{Developer Tools}{: Git, GitHub, MongoDB, MySQL, Redis, PostgreSQL, AWS, Firebase, Linux, TCP/IP} \\
+    \textbf{Developer Tools}{: Git, GitHub, MongoDB, MySQL, Redis, PostgreSQL, AWS, Linux} \\
     \vspace{2pt}
     \textbf{Coursework}{: Data Structures and Algorithms, DBMS, Operating Systems, Object-Oriented Programming}
   }}
