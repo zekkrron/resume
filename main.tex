@@ -1,8 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
+% Based on Kushagra Bhardwaj template
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -20,31 +18,23 @@
 \usepackage{newunicodechar}
 \newunicodechar{₹}{\textbf{Rs.}}
 \usepackage{tabularx}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -52,12 +42,11 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
+% Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure PDF is ATS readable
 \pdfgentounicode=1
 
 %-------------------------
@@ -66,65 +55,55 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
     \textit{\small#3} & \textit{\small #4} \\
   \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-  \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#1} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-  \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & #2 \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}} 
-\newcommand{\resumeItemListStart}{\begin{itemize}} 
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
 %----------HEADING----------
+\vspace{-20pt}
 \begin{center}
-  \textbf{\Huge \scshape Akash Singh} \\ \vspace{1pt}
-  \small +91 9818528644 $|$ 
-  \href{mailto:akash.singh13503@gmail.com}{\underline{akash.singh13503@gmail.com}} $|$ 
-  \href{https://www.linkedin.com/in/akashSinghSDE/}{\underline{LinkedIn}} $|$ 
-  \href{https://github.com/zekkrron}{\underline{GitHub}} $|$ 
-  \href{https://leetcode.com/u/zekkrron/}{\underline{Leetcode}}
+  {\Huge \scshape Akash Singh} \\ \vspace{1pt}
+  \small +91 9818528644 ~$|$~
+  \href{mailto:akash.singh13503@gmail.com}{akash.singh13503@gmail.com} ~$|$~
+  \href{https://www.linkedin.com/in/akashSinghSDE/}{LinkedIn} ~$|$~
+  \href{https://github.com/zekkrron}{GitHub} ~$|$~
+  \href{https://leetcode.com/u/zekkrron/}{Leetcode}
+  \vspace{-8pt}
 \end{center}
+
+\vspace{-8pt}
 
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {Netaji Subhas University of Technology, Delhi}{\textbf{CGPA: 8.22}}
-    {B.Tech, Instrumentation and Control Engineering}{December 2021 - June 2025}
+    {Netaji Subhas University of Technology, Delhi}{Dec 2021 -- Jun 2025}
+    {B.Tech, Instrumentation and Control Engineering}{CGPA: 8.22}
 \resumeSubHeadingListEnd
+
+\vspace{-9pt}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Delhivery}{October 2025 - Present}
+    {Delhivery}{October 2025 -- Present}
     {Software Development Engineer 1}{Gurugram, India}
+    \vspace{-7pt}
     \resumeItemListStart
       \resumeItem{\textbf{AI Ecosystem \& MCP Architecture:} Delivered MCP servers within a microservices architecture (Python, FastMCP), coding \textbf{100+ tools} to bridge internal systems with the AI ecosystem.}
       \resumeItem{\textbf{Developer Productivity:} Implemented a token-optimized MCP server tailored for Client IDE knowledge bases, slashing Delhivery One API client integration effort from \textbf{3 weeks to 5 days}.}
@@ -136,8 +115,9 @@
     \resumeItemListEnd
 
   \resumeSubheading
-    {ClearTax}{January 2025 - July 2025}
+    {ClearTax}{January 2025 -- July 2025}
     {Software Engineering Intern}{Bengaluru, India}
+    \vspace{-7pt}
     \resumeItemListStart
       \resumeItem{\textbf{Data Retrieval Microservice:} Built Data-Harvester (Java, Spring Boot), a generic \& configurable data retrieval microservice for the Global-Einvoicing team.}
       \resumeItem{\textbf{Feature Delivery \& Expansion:} Shipped the Transactional Reconciliation feature in Malaysia, reducing data inconsistency by \textbf{57\%}. Facilitated e-invoicing expansion to Singapore by crafting essential system templates and configurations.}
@@ -147,27 +127,25 @@
 
 \resumeSubHeadingListEnd
 
+\vspace{-12pt}
+
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
     \textbf{Languages}{: Python, Java, C++} \\
-    \vspace{2pt}
     \textbf{GenAI \& LLMs}{: LangGraph, LangChain, FastMCP, AI Agents, MCP Servers, Cross-Encoder} \\
-    \vspace{2pt}
     \textbf{Backend \& Distributed Systems}{: Spring Boot, FastAPI, REST API Design, Microservices, Kafka, RabbitMQ} \\
-    \vspace{2pt}
-    \textbf{Cloud, DevOps \& Databases}{: AWS, Kubernetes, Docker, Linux, PostgreSQL, MongoDB, Redis, MySQL}
+    \textbf{Cloud, DevOps \& Databases}{: AWS, Kubernetes, Docker, Linux, PostgreSQL, MongoDB, Redis, MySQL} \\
   }}
 \end{itemize}
+
+\vspace{-12pt}
 
 %-----------ACHIEVEMENTS-----------
 \section{Achievements}
 \resumeSubHeadingListStart
-  \resumeItemListStart
-    \resumeItem{Secured \textbf{global rank 1999}/36,727 in \textbf{Leetcode Biweekly Contest 138} (August 2024).}
-  \resumeItemListEnd
+  \resumeItem{Secured \textbf{global rank 1999}/36,727 in \textbf{Leetcode Biweekly Contest 138} (August 2024).}
 \resumeSubHeadingListEnd
 
-%-------------------------------------------
 \end{document}
